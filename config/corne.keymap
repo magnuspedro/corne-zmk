@@ -38,6 +38,7 @@
             bindings = <&kt LEFT_GUI &kp LEFT_SHIFT &kp RIGHT &kt LEFT_GUI>;
             label = "CH_PREV_WP";
         };
+    };
 
     behaviors {
         rpi: require_prior_idle {
@@ -50,17 +51,16 @@
             bindings = <&kp>, <&kp>;
         };
     };
-    };
 
     keymap {
         compatible = "zmk,keymap";
 
         letter {
             bindings = <
-&none             &kp Q           &kp W           &kp E        &kp R             &kp T        &kp Y         &kp U             &kp I               &kp O           &kp P              &kp LS(GRAVE)
-&kp LS(NUMBER_6)  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G        &kp H         &mt LEFT_SHIFT J  &mt LEFT_CONTROL K  &mt LEFT_ALT L  &mt LEFT_GUI SEMI  &kp SQT
-&none             &kp Z           &kp X           &kp C        &kp V             &kp B        &kp N         &kp M             &kp COMMA           &kp DOT         &kp FSLH           &kp GRAVE
-                                                  &rpi 3 ESC   &rpi 1 SPACE      &rpi 2 TAB   &rpi 5 RETURN &rpi 4 BACKSPACE  &rpi 6 DELETE
+&none             &kp Q           &kp W           &kp E        &kp R             &kp T         &kp Y          &kp U             &kp I               &kp O           &kp P              &kp LS(GRAVE)
+&kp LS(NUMBER_6)  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G         &kp H          &mt LEFT_SHIFT J  &mt LEFT_CONTROL K  &mt LEFT_ALT L  &mt LEFT_GUI SEMI  &kp SQT
+&none             &kp Z           &kp X           &kp C        &kp V             &kp B         &kp N          &kp M             &kp COMMA           &kp DOT         &kp FSLH           &kp GRAVE
+                                                  &lt  3 ESC   &lt  1 SPACE      &lt  2 TAB    &lt  5 RETURN  &lt  4 BACKSPACE  &lt  6 DELETE
             >;
         };
 
