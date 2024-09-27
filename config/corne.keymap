@@ -7,34 +7,35 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
     macros {
         next_wp: next_wp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LEFT>;
+            bindings = <&kt LEFT_GUI &kp LEFT &kt LEFT_GUI>;
             label = "NEXT_WP";
         };
 
         prev_wp: prev_wp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp RIGHT>;
+            bindings = <&kt LEFT_GUI &kp RIGHT &kt LEFT_GUI>;
             label = "PREV_WP";
         };
 
         ch_next_wp: ch_next_wp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LEFT_SHIFT &kp LEFT>;
+            bindings = <&kt LEFT_GUI &kp LEFT_SHIFT &kp LEFT &kt LEFT_GUI>;
             label = "CH_NEXT_WP";
         };
 
         ch_prev_wp: ch_prev_wp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LEFT_SHIFT &kp RIGHT>;
+            bindings = <&kt LEFT_GUI &kp LEFT_SHIFT &kp RIGHT &kt LEFT_GUI>;
             label = "CH_PREV_WP";
         };
     };
