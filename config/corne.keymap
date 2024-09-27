@@ -7,9 +7,38 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 
 / {
+    macros {
+        next_wp: next_wp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp LEFT>;
+            label = "NEXT_WP";
+        };
+
+        prev_wp: prev_wp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp RIGHT>;
+            label = "PREV_WP";
+        };
+
+        ch_next_wp: ch_next_wp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp LEFT_SHIFT &kp LEFT>;
+            label = "CH_NEXT_WP";
+        };
+
+        ch_prev_wp: ch_prev_wp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp LEFT_SHIFT &kp RIGHT>;
+            label = "CH_PREV_WP";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -18,7 +47,7 @@
 &none      &kp Q           &kp W           &kp E        &kp R             &kp T        &kp Y         &kp U             &kp I               &kp O           &kp P              &kp TILDE
 &kp LCTRL  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G        &kp H         &mt LEFT_SHIFT J  &mt LEFT_CONTROL K  &mt L LEFT_ALT  &mt LEFT_GUI SEMI  &kp SQT
 &none      &kp Z           &kp X           &kp C        &kp V             &kp B        &kp N         &kp M             &kp COMMA           &kp DOT         &kp FSLH           &kp GRAVE
-                                           &lt 0 ESC    &lt 5 SPACE       &lt 1 TAB    &lt 6 RETURN  &lt 3 BACKSPACE   &lt 6 DELETE
+                                           &lt 0 ESC    &lt 5 SPACE       &lt 1 TAB    &lt 6 RETURN  &lt 2 BACKSPACE   &lt 6 DELETE
             >;
         };
 
@@ -31,21 +60,21 @@
             >;
         };
 
-        layer_7 {
-            bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans    &trans    &trans         &trans       &trans     &trans  &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
-&trans  &trans    &kp RALT  &trans     &trans     &trans    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &trans
-                            &trans     &trans     &trans    &mkp MB2  &mkp MB1       &mkp MB3
-            >;
-        };
-
         layer_5 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        sound {
+            bindings = <
+&trans  &trans    &trans    &trans     &trans     &trans    &trans       &trans             &trans          &trans       &trans  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &next_wp     &kp C_VOLUME_UP    &kp C_NEXT      &prev_wp     &trans  &trans
+&trans  &trans    &kp RALT  &trans     &trans     &trans    &ch_next_wp  &kp C_VOLUME_DOWN  &kp C_PREVIOUS  &ch_prev_wp  &trans  &trans
+                            &trans     &trans     &trans    &kp C_STOP   &kp C_PLAY_PAUSE   &kp C_MUTE
             >;
         };
 
