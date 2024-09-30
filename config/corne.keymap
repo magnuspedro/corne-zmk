@@ -77,7 +77,7 @@
 
         bluetooth {
             bindings = <
-&trans      &tog 7        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &tog 0        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans        &trans        &trans          &trans  &trans  &trans
@@ -122,10 +122,10 @@
 
         mac {
             bindings = <
-&none             &kp Q                &kp W            &kp E            &kp R              &kp T        &kp Y         &kp U              &kp I            &kp O            &kp P                   &kp LS(GRAVE)
-&kp LS(NUMBER_6)  &rpi LEFT_CONTROL A  &rpi LEFT_ALT S  &rpi LEFT_GUI D  &rpi LEFT_SHIFT F  &kp G        &kp H         &rpi LEFT_SHIFT J  &rpi LEFT_GUI K  &rpi LEFT_ALT L  &rpi LEFT_CONTROL SEMI  &kp SQT
-&none             &kp Z                &kp X            &kp C            &kp V              &kp B        &kp N         &kp M              &kp COMMA        &kp DOT          &kp FSLH                &kp GRAVE
-                                                        &lt 3 ESC        &lt 1 SPACE        &lt 2 TAB    &lt 5 RETURN  &lt 4 BACKSPACE    &lt 6 DELETE
+&trans  &trans               &trans  &trans  &trans           &trans    &trans  &trans           &trans  &trans  &trans                &trans
+&trans  &rpi LEFT_CONTROL A  &trans  &trans  &rpi LEFT_GUI F  &trans    &trans  &rpi LEFT_GUI J  &trans  &trans  &rpi LCTRL SEMICOLON  &trans
+&trans  &trans               &trans  &trans  &trans           &trans    &trans  &trans           &trans  &trans  &trans                &trans
+                                     &trans  &trans           &trans    &trans  &trans           &trans
             >;
         };
     };
