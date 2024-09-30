@@ -87,7 +87,7 @@
 
         bluetooth {
             bindings = <
-&trans      &tog 7        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans        &trans        &trans          &trans  &trans  &trans
@@ -127,15 +127,6 @@
 &trans  &kp F11  &kp F4  &kp F5   &kp F6     &trans             &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F10  &kp F1  &kp F2   &kp F3     &trans             &trans  &trans  &trans  &trans  &trans  &trans
                          &kp ESC  &kp SPACE  &kp TAB            &trans  &trans  &trans
-            >;
-        };
-
-        mac {
-            bindings = <
-&trans  &trans               &trans  &trans  &trans           &trans    &trans  &trans           &trans  &trans  &trans        &trans
-&trans  &mpi LEFT_CONTROL 0  &trans  &trans  &mpi LEFT_GUI 0  &trans    &trans  &mpi LEFT_GUI 0  &trans  &trans  &mpi LCTRL 0  &trans
-&trans  &trans               &trans  &trans  &trans           &trans    &trans  &trans           &trans  &trans  &trans        &trans
-                                     &trans  &trans           &trans    &trans  &trans           &trans
             >;
         };
     };
