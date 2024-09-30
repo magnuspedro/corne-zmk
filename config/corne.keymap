@@ -132,9 +132,9 @@
 
         mac {
             bindings = <
-&trans  &trans               &trans  &trans  &trans           &trans    &trans  &trans           &trans  &trans  &trans                &trans
-&trans  &rpi LEFT_CONTROL A  &trans  &trans  &rpi LEFT_GUI F  &trans    &trans  &rpi LEFT_GUI J  &trans  &trans  &rpi LCTRL SEMICOLON  &trans
-&trans  &trans               &trans  &trans  &trans           &trans    &trans  &trans           &trans  &trans  &trans                &trans
+&trans  &trans               &trans  &trans  &trans           &trans    &trans  &trans           &trans  &trans  &trans        &trans
+&trans  &mpi LEFT_CONTROL 0  &trans  &trans  &mpi LEFT_GUI 0  &trans    &trans  &mpi LEFT_GUI 0  &trans  &trans  &mpi LCTRL 0  &trans
+&trans  &trans               &trans  &trans  &trans           &trans    &trans  &trans           &trans  &trans  &trans        &trans
                                      &trans  &trans           &trans    &trans  &trans           &trans
             >;
         };
