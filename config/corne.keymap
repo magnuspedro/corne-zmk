@@ -53,7 +53,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        mpi: require_prior_idle {
+        mpi: mac_require_prior_idle {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
