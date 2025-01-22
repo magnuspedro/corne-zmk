@@ -71,6 +71,7 @@
         compatible = "zmk,keymap";
 
         linux {
+            display-name = "Linux";
             bindings = <
 &kp CAPS          &kp Q            &kp W            &kp E         &kp R              &kp T        &kp Y         &kp U              &kp I                &kp O            &kp P               &kp LS(GRAVE)
 &kp LS(NUMBER_6)  &rpi LEFT_GUI A  &rpi LEFT_ALT S  &rpi LCTRL D  &rpi LEFT_SHIFT F  &kp G        &kp H         &rpi LEFT_SHIFT J  &rpi LEFT_CONTROL K  &rpi LEFT_ALT L  &rpi LEFT_GUI SEMI  &kp SQT
@@ -80,6 +81,7 @@
         };
 
         arrows {
+            display-name = "Arrows";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans         &trans       &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
@@ -88,7 +90,8 @@
             >;
         };
 
-        bluetooth {
+        mouse {
+            display-name = "Mouse & BT";
             bindings = <
 &trans      &studio_unlock &trans        &trans        &trans        &to 7           &trans           &trans           &trans        &trans           &trans  &trans
 &bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv  MOVE_LEFT  &mmv  MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
@@ -98,6 +101,7 @@
         };
 
         sound {
+            display-name = "Sound";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans             &trans          &trans       &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &next_wp     &kp C_VOLUME_UP    &kp C_NEXT      &prev_wp     &trans  &trans
@@ -107,6 +111,7 @@
         };
 
         number {
+            display-name = "Numbers";
             bindings = <
 &trans  &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &trans  &trans  &trans  &trans  &trans  &trans
@@ -116,6 +121,7 @@
         };
 
         symbol {
+            display-name = "Symbols";
             bindings = <
 &trans  &kp LS(LEFT_BRACKET)  &kp LS(N7)        &kp LS(N8)        &kp PERIOD        &kp LS(RBKT)                &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LS(COLON)         &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(PLUS)                &trans  &trans  &trans  &trans  &trans  &trans
@@ -125,6 +131,7 @@
         };
 
         f {
+            display-name = "F";
             bindings = <
 &trans  &kp F12  &kp F7  &kp F8   &kp F9     &kp PRINTSCREEN    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp F11  &kp F4  &kp F5   &kp F6     &trans             &trans  &trans  &trans  &trans  &trans  &trans
@@ -134,6 +141,7 @@
         };
 
         gaming {
+            display-name = "Gaming";
             bindings = <
 &kp LEFT_ALT    &kp Q  &kp W     &kp E      &kp R         &kp T       &kp Y          &kp U       &kp I      &kp O    &kp P      &to (-1)
 &kp LEFT_SHIFT  &kp A  &kp S     &kp D      &kp F         &kp G       &kp H          &kp J       &kp K      &kp L    &kp  SEMI  &none
